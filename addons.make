@@ -1,0 +1,6 @@
+ofxGui
+ofxNetwork
+ofxNetworkUtils
+ofxSvg
+ofxVectorGraphics
+ofxXmlSettings
