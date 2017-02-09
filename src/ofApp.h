@@ -1,6 +1,9 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxGui.h"
+
+# define NUM_LAYERS 7
 
 class ofApp : public ofBaseApp{
 
@@ -8,6 +11,7 @@ class ofApp : public ofBaseApp{
 		void setup();
 		void update();
 		void draw();
+        void drawDebug();
 
 		void keyPressed(int key);
 		void keyReleased(int key);
@@ -23,7 +27,17 @@ class ofApp : public ofBaseApp{
     
     bool b_grid;
     
-    ofShader shader;
+    ofShader shader_fbm;
+    ofFbo fbo_fbm;
+    
+    ofxPanel gui_fbm;
+    ofParameter<float> noiseScaleX, noiseScaleY, noiseIncrement1, noiseIncrement2, map1, map2, speed;
+    ofParameter<int> bSmooth, octaves;
+    ofParameter<bool> noise_draw;
+    ofPlanePrimitive plane;
+    
+    ofShader shader_layers;
+    ofFbo fbo_layers;
 		
-    ofImage layers[5];
+    ofImage layers[NUM_LAYERS];
 };
