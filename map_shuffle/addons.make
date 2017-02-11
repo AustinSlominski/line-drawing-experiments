@@ -1,0 +1,7 @@
+ofxGui
+ofxOsc
+ofxSvg
+ofxSyphon
+ofxThreadedImageLoader
+ofxVectorGraphics
+ofxXmlSettings
